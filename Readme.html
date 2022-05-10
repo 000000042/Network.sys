@@ -1,0 +1,96 @@
+<head>
+    <h1>Network System with GIT</h1>
+    <link>https://mhossein.com</link>
+</head>
+    
+<body>
+    <div>
+    <div>   <title>How dose this Network System work ?</title></div>
+        <div>   <b> - Theres ("Client-Network","Core-Network");
+            <br> ("Client-Network") - Theres the Detail :{
+                <details>    
+                    <br>    #!/bin/sh
+                    <br>    #!/bin/bash
+                    <br>    ## GIT - AUTO PUSH/RESIVER //MHOSSEIN.COM
+                    <br>                    #wiTH Easy mark..
+                    <br>                    # commit user info
+                    <br>USER_NAME=mhosseinweb
+                    <br>USER_EMAIL=https://github.com/mhosseinweb/Network-NBT.git
+                    <br>COMPANY_ClIENT_NUM=NOBAKHT_IT_core
+                    <br># target dir or file path
+                    <br># ('0	== all files ')
+                    <br>TARGETS=.
+                    <br>
+                    <br>
+                    <br># message
+                    <br>#MESSAGE="User Mhossein.com"
+                    <br>
+                    <br>#cd_link_cloneFile
+                    <br>LINK=/c/xampp/htdocs/Network-NBT/
+                    <br>LINKBK=/c/xampp/htdocs/Network-NBT/Network-NBT
+                    <br>LINKIN=/c/xampp/htdocs/Network-NBT/Network-NBT/Network-NBT
+                    <br># remote path 
+                    <br>RMP=git@github.com:mhosseinweb/Network-NBT.git
+                    <br>#date
+                    <br>date_var="$(date '+%Y-%m-%d-T%H:%M:%S')"
+                    <br>
+                    <br>#Log Creator 
+                    <br>log_file="log/$date_var-$USER_NAME.log"
+                    <br>logit() {
+                    <br>    echo "[${USER_NAME}][`date`][${COMPANY_ClIENT_NUM}]  " >> "${log_file}"
+                    <br>}
+                    <br>mkdir -p "log" && touch ${log_file}
+                    <br>
+                    <br>#======================================================================
+                    <br>#===========================================================
+                    <br># repository root path
+                    <br>cd ${LINK}
+                    <br># Add remote server
+                    <br>git remote add origin git@github.com:mhosseinweb/Network-NBT.git
+                    <br># Then github remote check
+                    <br>git remote -v
+                    <br>#Remove Clone File
+                    <br>    #RCF	()	{
+                    <br>        #rm -rf ${LINKBK}
+                    <br>    #}
+                    <br>    
+                    <br># ACTION MAKER Stage #0
+                    <br>    ACTION() {
+                    <br>    git pull origin master
+                    <br>    git fetch origin master
+                    <br>    git add ${TARGETS}
+                    <br>    git commit -m "${COMPANY_ClIENT_NUM} ${date_var}"	
+                    <br>    git push origin master	
+                    <br>    
+                    <br>}
+                    <br>#	clone & backup stage #1
+                    <br>    #CLONE	()	{
+                    <br>    #git clone ${RMP}
+                    <br>    #}
+                    <br>#	Clean Inside Clone stage #2
+                    <br>    #CIC	()	{
+                    <br>        #rm -rf	${LINKIN}
+                    <br>    #}
+                    <br># TIMER0[sec]
+                    <br>TIMER0=1
+                    <br>TIMER1=2
+                    <br># ACTION RUNNER 
+                    <br>while true;
+                    <br>do
+                    <br>    logit
+                    <br>        sleep ${TIMER1}
+                    <br>    #RCF
+                    <br>        #sleep ${TIMER1}
+                    <br>    ACTION
+                    <br>        sleep ${TIMER0}
+                    <br>    #CLONE
+                    <br>        #sleep ${TIMER1}
+                    <br>    #CIC
+                    <br>        #sleep ${TIMER0}
+                    <br>    exit
+                    <br>done
+                </details>
+            }</div></b>
+    <div>   <b> -("Core-Network") - will delete existence clone; then ACTION ; then clone file as backup if needed.
+
+    </b></div></body>
